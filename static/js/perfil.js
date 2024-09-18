@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         petAgeElement.innerHTML = `
             <div style="text-align: center;">
                 <span style="font-size: smaller;">${petName} tem<br> ${idadePet.anos} ano(s)<br> ${idadePet.meses} mes(es)<br> e ${idadePet.dias} dias</span><br><br>
-                <img src="../static/imagens/boloNiver.png" alt="" style="width: 100px; height: auto;">
+                <img src="./static/imagens/boloNiver.png" alt="" style="width: 100px; height: auto;">
             </div><br>`;
     } else {
         document.getElementById('petAge').textContent = 'Nome do pet não encontrado.';
