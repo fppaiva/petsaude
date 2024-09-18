@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|| RECUPERAR SENHA ||</title>
+    <link rel="stylesheet" href="../static/css/recupera_senha.css">
+</head>
+<body>
+    <div class="back-link-container">
+        <img src="../static/imagens/login.png" alt="Login Icon" class="login-icon">
+        <a href="./index_login.html" class="back-link">LOGIN/SAIR</a>
+        <a href="./perfil.html" class="back-link">Seu Perfil</a>
+        <a href="./registros.html" class="back-link">Registros</a>
+    </div>
+    <main>
+        <h2>Recuperação de Senha</h2>
+        <form id="recovery-form">
+            <label for="email">E-MAIL:</label>
+            <input aria-autocomplete="off" type="email" placeholder="Digite o email que foi cadastrado" id="email" required autocomplete="off">
+
+            <div class="form-buttons">
+                <button type="submit">Enviar Instruções</button>
+            </div>
+        </form>
+        <div id="mensagemSucesso" class="mensagem-erro" style="display: none;">
+            <p>Instruções para recuperação de senha foram enviadas para o seu e-mail.</p>
+            <button id="fecharMensagemSucesso" class="mensagem-erro-botao">OK</button>
+        </div>
+    </main>
+
+    <script src="../static/js/recupera_senha.js" ></script>
+
+</body>
+</html>

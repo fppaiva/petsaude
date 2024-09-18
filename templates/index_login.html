@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|| LOGIN - CADASTRO ||</title>
+    <link rel="stylesheet" href="../static/css/index_login.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="container_login">
+                <h1>BEM VINDO</h1>
+                <h2>LOGIN</h2><br>
+                <form id="login_form" action="cadastro_pet.html" method="post">
+                    <div class="container_login_input">
+                        <input autocomplete="off" type="text" placeholder="Usuário" id="username" name="username" required>
+                    </div>
+                    <div class="container_login_input">
+                        <input autocomplete="off" type="password" placeholder="Senha" id="password" name="password" required>
+                        <div class="container_login_input_forgot_password">
+                            <a href="./recupera_senha.html">Esqueci a senha</a>
+                        </div>
+                    </div>
+                    <a href="registros_pets.html" class="button-link entrar" target="_blank">Entrar</a>
+                </form>
+            </div>
+
+            <div class="container_cadastro">
+                <form id="cadastro_form" action="cadastro_pet.html" method="post" onsubmit="return validatePasswords()">
+                    <h1>PET SAÚDE</h1>
+                    <h2>ACOMPANHE A SAÚDE DO SEU PET</h2><br>
+                    <div class="container_cadastro_input">
+                        <input autocomplete="off" type="text" placeholder="Tutor - Seu Nome Completo" id="cadastro_username" name="cadastro_username" required>
+                    </div>
+                    <div class="container_cadastro_input">
+                        <input autocomplete="off" type="password" placeholder="Senha" id="cadastro_password" name="cadastro_password" required>
+                        <span class="toggle-password" id="toggle-password">Mostrar</span>
+                    </div>
+                    <div class="container_cadastro_input">
+                        <input autocomplete="off" type="password" placeholder="Confirmar Senha" id="cadastro_confirmar_password" name="cadastro_confirmar_password" required>
+                        <span class="toggle-password" id="toggle-confirm-password">Mostrar</span>
+                    </div>
+
+                    <button type="submit" class="button-link cadastrar">Cadastrar</button>
+                    
+                </form>
+
+                <!-- Caixa de Mensagem Sobreposta -->
+                <div id="messageOverlay" class="message-overlay" style="display: none;">
+                    <div class="message-box">
+                        <p id="messageContent">As senhas devem ser iguais</p>
+                        <button id="closeMessage">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('seuFormulario').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('cadastro_username').value;
+            localStorage.setItem('username', username);
+            window.location.href = 'outra_pagina.html';
+        });
+    </script>
+
+    <script src="../static/js/index_login.js"></script>
+
+</body>
+</html>

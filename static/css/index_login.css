@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../imagens/pets.jpg) center/cover no-repeat;
+}
+
+h1, .container_login h1, .container_cadastro h1 {
+    font-weight: 800;
+    color: #ffffffc7;
+}
+
+h2, .container_login h2, .container_cadastro h2 {
+    font-weight: 400;
+    color: #ffffffc7;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+h2 {
+    font-size: small;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container_login, .container_cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.container_login {
+    background-color: rgba(2, 14, 126, 0.562);
+    margin-right: 20px;
+}
+
+.container_cadastro {
+    background-color: rgba(161, 91, 0, 0.616);
+}
+
+input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: transparent;
+    color: white;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.container_login_input_forgot_password {
+    font-size: 90%;
+    text-align: right;
+}
+
+.container_login_input_forgot_password a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+
+.button-link {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    text-decoration: none; 
+    color: white;
+}
+
+
+.container_login .button-link.entrar {
+    margin-top: 80px;
+    width: 70%;
+    background-color: rgb(0, 8, 82);
+}
+
+.container_cadastro .button-link.cadastrar {
+    width: 50%;
+    background-color: rgb(92, 52, 0);
+
+}
+
+.button-link:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.error {
+    color: #fff;
+    display: none;
+    margin-top: 5%;
+    font-weight: bolder;
+}
+
+.toggle-password {
+    cursor: pointer;
+    font-size: 0.8em;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-90%);
+    color: #fff;
+}
+
+.container_cadastro_input {
+    position: relative;
+}
+
+.container_cadastro_input input {
+    padding-right: 30px;
+}
+
+.message-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.message-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.message-box p {
+    margin: 0 0 20px;
+}
+
+.message-box button {
+    background-color: rgb(0, 8, 82);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 35%;
+}
+
+.message-box button:hover {
+    background-color: rgba(2, 14, 126, 0.562);
+}

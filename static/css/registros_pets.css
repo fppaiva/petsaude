@@ -1,0 +1,233 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../imagens/pets.jpg) center/cover no-repeat;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    background-color: rgba(161, 91, 0, 0.616);
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+#tipo-form {
+    display: flex;
+    align-items: center;
+}
+
+.tipo-opcoes, .tipo-opcao {
+    display: flex;
+    gap: 35px;
+    font-size: 14px;
+}
+
+.tipo-opcao {
+    align-items: center;
+    display: flex;
+    gap: 3px;
+}
+
+.tipo-opcao input[type="radio"] {
+    margin-right: 2px;
+    accent-color: rgb(92, 52, 0);
+}
+
+.tipo-opcao input[type="radio"]:checked + span {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(92, 52, 0);
+    color: #ffffffc7;
+    font-weight: bold;
+}
+
+#pet-records td:last-child {
+    min-width: 150px; 
+}
+
+button {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color: #ffffffc7;
+    background-color: rgb(92, 52, 0);
+}
+
+button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    color: #ffffffc7;
+    margin-bottom: 10px;
+}
+
+label {
+    color: white;
+    font-size: 14px;
+}
+
+input[type="date"], input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: transparent;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    width: 100%;
+}
+
+input[type="text"] {
+    margin-bottom: 10px;
+}
+
+.mensagem-erro, .confirmacao-exclusao {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.mensagem-erro {
+    background-color: #ffffff;
+    color: rgb(0, 8, 82);
+    padding: 15px;
+    text-align: center;
+}
+
+.mensagem-erro-botao {
+    background-color: rgb(0, 8, 82);
+    color: #ffffffc7;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.confirmacao-exclusao {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.confirmacao-exclusao-botoes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botao-confirmar, .botao-cancelar {
+    background-color: rgb(0, 8, 82);
+    color: #ccc;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.botao-cancelar {
+    background-color: rgba(157, 158, 158, 0.562);
+    color:  rgb(0, 8, 82);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-buttons button {
+    width: 70%;
+    height: 40px;
+    background-color: rgb(92, 52, 0);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.form-buttons .botão-registrar {
+    margin-left: 25%;
+}
+
+.form-buttons .botao-excluir {
+    background-color: rgb(223, 168, 96);
+    width: 35%;
+    margin-left: 35%;
+}
+
+
+.back-link-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    z-index: 2;
+}
+
+.login-icon {
+    width: 50px;
+    height: auto;
+    margin-right: 25%;
+}
+
+.back-link, .back-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.back-link:hover, .back-link a:hover {
+    text-decoration: underline;
+}
+

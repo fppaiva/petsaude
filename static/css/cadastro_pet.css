@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+}
+
+
+
+.back-link-container {
+    position: absolute;
+    top: 20px;
+    right: 20px; 
+    text-align: center; 
+    margin-right: 10px;
+
+}
+
+.login-icon {
+    width: 50px; 
+    height: auto; 
+    display: block; 
+    margin-bottom: 5px; 
+    
+}
+
+.back-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+
+h3 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: white
+    
+}
+
+/* Estilo do body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    flex-direction: column;
+    background-image: url(../imagens/pets.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../imagens/pets.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Desfoque à imagem */
+    z-index: 999; /* Caixa de mensagem sobreposta */
+    pointer-events: none; 
+    display: none; 
+}
+
+.container {
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    margin-bottom: 20px;
+    
+}
+
+/* Estilos para o elemento de mensagem */
+#welcome_message {
+    font-size: 20px; 
+    color: #FFF; 
+    background-color: rgba(2, 14, 126, 0.562);
+    padding: 10px; 
+    margin-top: 10px; 
+    border-radius: 5px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; 
+}
+
+.welcome-section, .form-container {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 140%
+}
+
+.form-container {
+    background-color: rgba(161, 91, 0, 0.616);
+   
+}
+
+.form-group {
+    margin-bottom: 15px;
+    
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+form {
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: calc(100% - 10px); 
+    font-size: 14px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+input[type="radio"] {
+    accent-color: rgb(92, 52,);
+    accent-color: rgb(92, 52, 0);
+}
+
+input[type="date"] {
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    padding: 8px; 
+    font-family: "Montserrat", sans-serif;
+    background: transparent;
+    color: white;
+
+}
+
+
+input::placeholder {
+    color: #fff;
+}
+
+label {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(92, 52, 0);
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: rgb(223, 168, 96);
+    
+}
+
+button {
+    background-color: rgb(92, 52, 0); 
+    border: none; 
+    color: white; 
+    padding: 10px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin-top: 30px; 
+    cursor: pointer; 
+    border-radius: 20px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
+    width: 150px;
+    margin-left: 10px;  
+
+}
+
+button:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    transform: scale(1); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.form-group-btn {
+    text-align: center;
+}
+
+
+/* Estilização: seu pet é: */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-top: 10px;
+    
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.column {
+    flex: 1; 
+    margin-right: 10px; 
+}
+
+
+.label-text {
+    margin-right: 5px;    
+}
+
+
+/* ==== ESTILIZAÇÃO DA CAIXA DE MENSAGEM SOBREPOSTA ==== */
+body.blurred .background-image,
+body.blurred .container {
+    filter: blur(2px); 
+    pointer-events: none; 
+}
+
+body.blurred .form-container {
+    opacity: 0.5; 
+}
+
+
+/* caixa de mensagem */
+.message-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.message-box {
+    background-color: rgba(255, 255, 255, 0.664);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    color:  rgb(0, 8, 82);
+}
+
+.message-box p {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.message-box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(0, 8, 82); 
+    color: white;
+    cursor: pointer;
+}
+
+.message-box button:hover {
+    background:rgba(0, 8, 82);
+}
+
+
+/* Overlay embaçado de fundo */
+.overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 999; 
+}
+

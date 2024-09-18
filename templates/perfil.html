@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|| PERFIL DO USUÁRIO ||</title>
+    <link rel="stylesheet" href="../static/css/perfil.css">
+</head>
+<body>
+    <div class="back-link-container">
+        <img src="../static/imagens/login.png" alt="Login Icon" class="login-icon">
+        <a href="./index_login.html" class="back-link">LOGIN/SAIR</a>
+        <a href="./perfil.html" class="back-link">Seu Perfil</a>
+        <a href="./registros_pets.html" class="back-link">Registros</a>
+    </div>
+
+    <main>
+        <div class="container">
+            <h1>SEU PERFIL</h1>
+            <div id="userProfile">
+                <p>NOME COMPLETO DO TUTOR: <span id="username"></span></p>
+                <p>NOME DE USUÁRIO: <span id="userName"></span></p>
+                <p>EMAIL: <span id="userEmail"></span></p>
+                <br>
+                <p>NOME DO PET: <span id="petName"></span></p>
+                <p>RAÇA DO PET: <span id="petBreed"></span></p>
+                <p>DATA DE NASCIMENTO DO PET: <span id="petBirthDate"></span></p>
+    
+                <!-- Idade do Pet -->
+                <div class="pet-info">
+                    <!-- <img src="../static/imagens/boloNiver.png" alt="Bolo de Aniversário"> -->
+                    <p id="petAge"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="../static/js/perfil.js"></script> 
+</body>
+</html>
+

@@ -1,0 +1,105 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    margin-bottom: 15px;
+    color:  #f0f0f0;
+    text-align: center;
+}
+
+
+body {   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../imagens/pets.jpg) center/cover no-repeat;
+    position: relative; 
+    color: white;
+
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    background-color: rgba(161, 91, 0, 0.616);
+    z-index: 1; 
+}
+
+/* Container dos links e ícone no canto superior direito */
+.back-link-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px; 
+    z-index: 2; 
+}
+
+.login-icon {
+    width: 50px;
+    height: auto;
+    margin-right: 12%;
+}
+
+.back-link, .back-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.back-link:hover, .back-link a:hover {
+    text-decoration: underline;
+}
+
+#userProfile p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+
+
+/* estilização idade bolo */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#userProfile {
+    /* background-color: rgba(161, 91, 0, 0.466); */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Permite o posicionamento relativo dos elementos internos */
+}
+
+.pet-info {
+    position: absolute;
+    top: 20px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    text-align: right;
+}
+
+.pet-info p {
+    margin-bottom: 10px;
+    
+}
+
+.pet-info img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+

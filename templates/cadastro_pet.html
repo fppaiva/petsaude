@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|| CONCLUA SEU CADASTRO ||</title>
+    <link rel="stylesheet" href="../static/css/cadastro_pet.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="back-link-container">
+            <img src="../static/imagens/login.png" alt="Login Icon" class="login-icon">
+            <a href="./index_login.html" class="back-link">LOGIN</a>
+        </div>
+
+        <div class="form-container">
+            <form>
+                <h3>SOBRE VOCÊ</h3>
+                <input autocomplete="off" type="text" placeholder="Nome de usuário: Você usará ele para fazer login" id="nome_usuario" name="nome_usuario" required>
+
+                <div class="form-group">
+                    <input autocomplete="off" type="email" placeholder="Email para mantermos contato" id="email" name="email" required>
+                </div>
+                
+                <h3>SOBRE SEU PET</h3>
+                <input autocomplete="off" type="text" placeholder="Nome do seu Pet" id="nomePet" name="nomePet" required>
+                <input autocomplete="off" type="text" placeholder="Raça do seu Pet" id="racaPet" name="racaPet" required>
+                    
+                <div class="form-group">
+                    <div class="radio-group">
+                        <div class="row">
+                            <div class="column">
+                                <input autocomplete="off" type="radio" id="cachorro" name="tipoPet" value="cachorro">
+                                <label for="cachorro">Cachorro</label>
+                            </div>
+                            <div class="column">
+                                <input autocomplete="off" type="radio" id="macho" name="sexoPet" value="macho">
+                                <label for="macho">Macho</label>
+                            </div>
+                            <div class="column">
+                                <input autocomplete="off" type="radio" id="porte-pequeno" name="portePet" value="porte-pequeno">
+                                <label for="porte-pequeno">Porte Pequeno</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <input autocomplete="off" type="radio" id="gato" name="tipoPet" value="gato">
+                                <label for="gato">Gato</label>
+                            </div>
+                            <div class="column">
+                                <input autocomplete="off" type="radio" id="femea" name="sexoPet" value="femea">
+                                <label for="femea">Fêmea</label>
+                            </div>
+                            <div class="column">
+                                <input autocomplete="off" type="radio" id="porte-medio" name="portePet" value="porte-medio">
+                                <label for="porte-medio">Porte Médio</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                        <!-- Vazio para espaçamento -->
+                            </div>
+                            <div class="column">
+                                        <!-- Vazio para espaçamento -->
+                            </div>
+                            <div class="column">
+                                <input autocomplete="off" type="radio" id="porte-grande" name="portePet" value="porte-grande">
+                                <label for="porte-grande">Porte Grande</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                        <!-- Vazio para espaçamento -->
+                            </div>
+                            <div class="column">
+                                        <!-- Vazio para espaçamento -->
+                            </div>
+                            <div class="column">
+                                <input autocomplete="off" type="radio" id="gigante" name="portePet" value="gigante">
+                                <label for="gigante">Gigante</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dataNascimento">Data de Nascimento do seu Pet:</label>
+                    <input autocomplete="off" type="date" id="dataNascimento" name="dataNascimento" required>
+                </div>
+                
+                <div class="form-group-btn">
+                    <button type="submit" id="registerButton">Finalizar</button>
+                    <button type="reset">Limpar</button>
+                </div>                 
+            </form>
+        </div>
+    </div>
+
+    <!-- Caixa de mensagem sobreposta -->
+    <div id="messageOverlay" class="message-overlay" style="display: none;">
+        <div class="message-box">
+            <p id="messageContent"></p>
+            <button id="closeMessage">OK</button>
+        </div>
+    </div>
+
+    <!-- Overlay embaçado -->
+    <div id="overlay" class="overlay" style="display: none;"></div>
+
+    <!-- Caixa de Mensagem "Cadastro Realizado com Sucesso!" Sobreposta -->
+    <div id="successOverlay" class="message-overlay" style="display: none;">
+        <div class="message-box">
+            <p id="successMessageContent">Cadastro realizado com sucesso!<br>Faça login ...</p>
+            <button id="closeSuccessMessage">OK</button>
+        </div>
+    </div> 
+    <script src="../static/js/cadatro_pet.js"></script>
+</body>
+</html>

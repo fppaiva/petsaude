@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|| REGISTROS ||</title>
+    <link rel="stylesheet" href="../static/css/registros_pets.css">
+</head>
+<body>
+    <div class="back-link-container">
+        <img src="../static/imagens/login.png" alt="Login Icon" class="login-icon">
+        <a href="./index_login.html" class="back-link">LOGIN/SAIR</a>
+        <a href="./perfil.html" class="back-link">Seu Perfil</a>
+    </div>
+    
+    <main>
+        <section id="form-section">
+            <h2>Adicionar Registro</h2>
+            <form id="pet-form">
+                <label>Tipo:</label>
+                <div class="tipo-opcoes">
+                    <label class="tipo-opcao">
+                        <input autocomplete="off" type="radio" name="tipo" value="Vacina" required />
+                        Vacina
+                    </label>
+                    <label class="tipo-opcao">
+                        <input autocomplete="off" type="radio" name="tipo" value="Vermifugação" required />
+                        Vermifugação
+                    </label>
+                    <label class="tipo-opcao">
+                        <input autocomplete="off" type="radio" name="tipo" value="Medicacao" required />
+                        Medicação Extra
+                    </label>
+                </div>
+                <label for="nome">Nome e Descrição:</label>
+                <input autocomplete="off" type="text" id="nome" required>
+                <label for="data">Data:</label>
+                <input autocomplete="off" type="date" id="data" required>
+
+                <div class="form-buttons">
+                    <button type="submit" class="botão-registrar">Registrar</button>
+                </div>
+                <div class="form-buttons">
+                    <button onclick="exibirConfirmacaoExclusao()" class="botao-excluir">Excluir Dados</button>
+                </div>
+            </form>
+
+            <div id="confirmacaoExclusao" class="confirmacao-exclusao" style="display:none;">
+                <div class="confirmacao-exclusao-content">
+                    <p id="confirmacaoExclusaoTexto" class="confirmacao-exclusao-texto">Essa ação irá excluir todos os dados. Deseja continuar?</p>
+                    <div class="confirmacao-exclusao-botoes">
+                        <button onclick="excluirDados()" class="botao-confirmar">Sim</button>
+                        <button onclick="ocultarConfirmacaoExclusao()" class="botao-cancelar">Não</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mensagemErro" class="mensagem-erro" style="display:none;">
+                <div class="mensagem-erro-content">
+                    <p id="mensagemErroTexto" class="mensagem-erro-texto"></p>
+                    <button id="fecharMensagemErro" class="mensagem-erro-botao">OK</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="records-section">
+            <h2>Registros</h2>
+            <table id="pet-records">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                        <th>Data</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Registros Dinamicamente -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="../static/js/registros_pets.js"></script>
+    
+</body>
+</html>
+
