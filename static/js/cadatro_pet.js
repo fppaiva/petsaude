@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const userName = localStorage.getItem('userName');
         if (userName) {
             const messageContent = document.getElementById('messageContent');
-            messageContent.innerHTML = `Olá, ${userName}!<br>É muito bom ter você por aqui. Por favor, finalize seu cadastro.`;
+            messageContent.innerHTML = `Olá, ${userName}!<br>É muito bom ter você por aqui. Por gentileza, finalize seu cadastro.`;
         } else {
             console.error('Nome de usuário não encontrado no localStorage.');
         }
@@ -64,12 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
         bodyElement.classList.add('blurred');
         overlay.style.display = 'block';
 
+
+        // Limpar os campos do formulário após exibir a mensagem de sucesso
+        document.getElementById('nome_usuario').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('nomePet').value = '';
+        document.getElementById('racaPet').value = '';
+        document.getElementById('dataNascimento').value = '';
+
         // Ocultar a mensagem de sucesso após 5 segundos ou quando o usuário clicar em "OK"
         setTimeout(() => {
             successOverlay.style.display = 'none';
             bodyElement.classList.remove('blurred');
             overlay.style.display = 'none';
-        }, 6000); // Tempo em milissegundos (1000 ms = 1 segundos)
+        }, 8000); // Tempo em milissegundos (1000 ms = 1 segundos)
 
         // Fechar a mensagem de sucesso quando o botão "OK" for clicado
         closeSuccessMessageButton.addEventListener('click', () => {

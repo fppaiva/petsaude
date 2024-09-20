@@ -51,14 +51,12 @@ label {
 
 .mensagem-erro {
     background-color: #ffffff;
-    /* color: #f44336; */
     color:  rgb(0, 8, 82);
-    padding: 15px;
+    padding: 30px;
     text-align: center;
 }
 
 .mensagem-erro-botao {
-    /* background-color: #f44336; */
     background-color: rgb(0, 8, 82);
     color: #ffffffc7;
     border: none;
